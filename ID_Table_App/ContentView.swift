@@ -11,6 +11,10 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = CableViewModel()
     
+    init() {
+            UILabel.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).adjustsFontSizeToFitWidth = true
+        }
+    
     var body: some View {
         NavigationView {
             List(viewModel.filteredCables) { cable in
