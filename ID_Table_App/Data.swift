@@ -40,11 +40,23 @@ class CableViewModel: ObservableObject {
         }
     }
     
+//    var filteredCables: [CableItem] {
+//        if searchText.isEmpty {
+//            return cables
+//        } else {
+//            return cables.filter { $0.ケーブル名.contains(searchText) || ($0.コネクタ名 ?? "").contains(searchText) }
+//        }
+//    }
+    
     var filteredCables: [CableItem] {
         if searchText.isEmpty {
             return cables
         } else {
-            return cables.filter { $0.ケーブル名.contains(searchText) || ($0.コネクタ名 ?? "").contains(searchText) }
+            let lowercasedSearchText = searchText.lowercased()
+            return cables.filter {
+                $0.ケーブル名.lowercased().contains(lowercasedSearchText) ||
+                ($0.コネクタ名?.lowercased().contains(lowercasedSearchText) ?? false)
+            }
         }
     }
 }

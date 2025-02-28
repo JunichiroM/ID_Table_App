@@ -16,10 +16,10 @@ struct DetailView: View {
         Form {
             Section(header: Text("Cable Details")) {
                 Text("Cable Name: \(cable.ケーブル名)")
-                Text("Connector: \(String(describing: cable.コネクタ名))")//ここを変えた
+                Text("Connector: \(cable.コネクタ名 ?? "")")
                 Text("ID: \(cable.ID)")
-                Text("Manufacturer: \(cable.コネクタメーカー ?? "Unknown")")
-                Text("Registration Machine: \(cable.登録機 ?? "Unknown")")
+                Text("Manufacturer: \(cable.コネクタメーカー ?? "")")
+                Text("Registration Machine: \(cable.登録機 ?? "")")
             }
             
             Section(header: Text("Edit Remarks")) {
@@ -40,6 +40,18 @@ struct DetailView: View {
     }
 }
 
+
 #Preview {
-    //DetailView(cable: CableItem, viewModel: CableViewModel)
+    DetailView(
+        cable: CableItem(
+            No: 1,
+            ケーブル名: "Sample Cable",
+            コネクタ名: "Sample Connector",
+            ID: "H179013-1.5D2V",
+            コネクタメーカー: "Test Manufacturer",
+            登録機: "CS5300",
+            備考: "Sample Remarks"
+        ),
+        viewModel: CableViewModel()
+    )
 }

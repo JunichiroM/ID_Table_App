@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ID_Table_AppApp: App {
+struct ID_Table_App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

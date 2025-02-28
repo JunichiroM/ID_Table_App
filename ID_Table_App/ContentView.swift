@@ -17,11 +17,11 @@ struct ContentView: View {
                 NavigationLink(destination: DetailView(cable: cable, viewModel: viewModel)) {
                     VStack(alignment: .leading) {
                         Text(cable.ケーブル名).font(.headline)
-                        Text("Connector: \(cable.コネクタ名)").font(.subheadline)
+                        Text("Connector: \(cable.コネクタ名 ?? "")").font(.subheadline)
                     }
                 }
             }
-            .navigationTitle("Cable List")
+            .navigationTitle("Cable & Connector List")
             .searchable(text: $viewModel.searchText)
         }
     }
