@@ -11,6 +11,7 @@ import SwiftUI
 struct DetailView: View {
     @State var cable: CableItem
     @ObservedObject var viewModel: CableViewModel
+    @State private var showConfirmation = false
     
     var body: some View {
         Form {
@@ -31,14 +32,24 @@ struct DetailView: View {
         }
         .navigationTitle("Detail View")
         .toolbar {
-            Button("Save") {
-                if let index = viewModel.cables.firstIndex(where: { $0.No == cable.No }) {
-                    viewModel.cables[index].備考 = cable.備考
+                    Button("Save") {
+                        if let index = viewModel.cables.firstIndex(where: { $0.No == cable.No }) {
+                            viewModel.cables[index].備考 = cable.備考
+                        }
+                        viewModel.saveData() // Save data to UserDefaults
+                        showConfirmation = true
+                    }
                 }
-            }
-        }
+                .alert(isPresented: $showConfirmation) {
+                    Alert(title: Text("Saved"), message: Text("Your remarks have been updated and saved."), dismissButton: .default(Text("OK")))
+                }
     }
 }
+
+
+
+
+
 
 
 #Preview {

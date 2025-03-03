@@ -24,12 +24,15 @@ class CableViewModel: ObservableObject {
     @Published var cables: [CableItem] = []
     @Published var searchText: String = ""
     
+    let loadingFile = "output_2025_03_03"
+    
     init() {
         loadData()
     }
     
     func loadData() {
-        if let url = Bundle.main.url(forResource: "ID_table", withExtension: "json") {
+        //if let url = Bundle.main.url(forResource: "ID_table", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: loadingFile, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decodedData = try JSONDecoder().decode([CableItem].self, from: data)
@@ -39,6 +42,16 @@ class CableViewModel: ObservableObject {
             }
         }
     }
+    
+    // Save the updated remarks to UserDefaults
+        func saveData() {
+            do {
+                let encodedData = try JSONEncoder().encode(cables)
+                UserDefaults.standard.set(encodedData, forKey: "savedCables")
+            } catch {
+                print("Failed to save data: \(error)")
+            }
+        }
     
 //    var filteredCables: [CableItem] {
 //        if searchText.isEmpty {

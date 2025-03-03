@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		18794CF32D6718DC0048D9BA /* ID_table.json in Resources */ = {isa = PBXBuildFile; fileRef = 18794CF22D6718DC0048D9BA /* ID_table.json */; };
+		18794CF52D7595BF0048D9BA /* output_2025_03_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 18794CF42D7595BF0048D9BA /* output_2025_03_03.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18794CC72D65BFA80048D9BA /* ID_Table_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ID_Table_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18794CF22D6718DC0048D9BA /* ID_table.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ID_table.json; sourceTree = "<group>"; };
+		18794CF42D7595BF0048D9BA /* output_2025_03_03.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = output_2025_03_03.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,6 +39,7 @@
 		18794CBE2D65BFA80048D9BA = {
 			isa = PBXGroup;
 			children = (
+				18794CF42D7595BF0048D9BA /* output_2025_03_03.json */,
 				18794CF22D6718DC0048D9BA /* ID_table.json */,
 				18794CC92D65BFA80048D9BA /* ID_Table_App */,
 				18794CC82D65BFA80048D9BA /* Products */,
@@ -115,6 +118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18794CF52D7595BF0048D9BA /* output_2025_03_03.json in Resources */,
 				18794CF32D6718DC0048D9BA /* ID_table.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
