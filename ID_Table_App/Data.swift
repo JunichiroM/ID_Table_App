@@ -24,7 +24,7 @@ class CableViewModel: ObservableObject {
     @Published var cables: [CableItem] = []
     @Published var searchText: String = ""
     
-    let loadingFile = "output_2025_03_03"
+    let loadingFile = "output_2025_03_04"
     
     init() {
         loadData()
