@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct ID_Table_App: App {
+    // Add AppDelegate here
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

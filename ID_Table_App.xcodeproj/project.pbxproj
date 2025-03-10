@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18794CF52D7595BF0048D9BA /* output_2025_03_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 18794CF42D7595BF0048D9BA /* output_2025_03_03.json */; };
 		18794CF72D7697F30048D9BA /* output_2025_03_04.json in Resources */ = {isa = PBXBuildFile; fileRef = 18794CF62D7697F30048D9BA /* output_2025_03_04.json */; };
+		18794D0D2D7ACAE40048D9BA /* SwiftSMTP in Frameworks */ = {isa = PBXBuildFile; productRef = 18794D0C2D7ACAE40048D9BA /* SwiftSMTP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18794D0D2D7ACAE40048D9BA /* SwiftSMTP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,7 @@
 			);
 			name = ID_Table_App;
 			packageProductDependencies = (
+				18794D0C2D7ACAE40048D9BA /* SwiftSMTP */,
 			);
 			productName = ID_Table_App;
 			productReference = 18794CC72D65BFA80048D9BA /* ID_Table_App.app */;
@@ -103,6 +106,9 @@
 			);
 			mainGroup = 18794CBE2D65BFA80048D9BA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18794D0B2D7ACAE40048D9BA /* XCRemoteSwiftPackageReference "Swift-SMTP" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 18794CC82D65BFA80048D9BA /* Products */;
 			projectDirPath = "";
@@ -266,6 +272,7 @@
 				DEVELOPMENT_TEAM = H2W8884HPS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ID-Table-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +303,7 @@
 				DEVELOPMENT_TEAM = H2W8884HPS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ID-Table-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18794D0B2D7ACAE40048D9BA /* XCRemoteSwiftPackageReference "Swift-SMTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Swift-SMTP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18794D0C2D7ACAE40048D9BA /* SwiftSMTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18794D0B2D7ACAE40048D9BA /* XCRemoteSwiftPackageReference "Swift-SMTP" */;
+			productName = SwiftSMTP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18794CBF2D65BFA80048D9BA /* Project object */;
 }
